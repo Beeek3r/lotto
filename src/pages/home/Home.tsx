@@ -1,4 +1,4 @@
-import {Box, Button, Stack} from '@mui/material';
+import {Box, Button, Stack, CircularProgress} from '@mui/material';
 import {Draw, useLottos} from '../../hooks/queries/lottos/useLottos.ts';
 import {useEffect, useRef, useState} from 'react';
 import DrawPicker from '../../components/DrawPicker';
@@ -36,7 +36,7 @@ const Home = () => {
 
   /** Should do a better job with loading state **/
   if (!data) {
-    return <>Loading</>
+    return  <CircularProgress />
   }
 
   return (

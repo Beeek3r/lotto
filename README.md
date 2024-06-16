@@ -23,10 +23,11 @@ Alternatively, you can run this via `docker-compose`
 You can see a light demo here https://beeek3r.github.io/lotto/
 
 ## Screenshots
-![End State Image](public/end-state.png)
-![End State Image](public/end-state.png)
+![End State Image](public/pre-state.png)
+![End State Image](public/post-state.png)
 
-<div style="display: flex; flex-direction: column; align-items: center;">
-  <img src="public/end-state.png" alt="End State" />
-  <p>End State</p>
-</div>
+## Extra
+Created the main component in a generic manner for different draws. If you update the call in `Home.tsx` you can view addtional draws.
+![End State Image](public/extra-1.png)
+![End State Image](public/extra-2.png)
+![End State Image](public/extra-3.png)

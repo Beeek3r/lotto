@@ -33,6 +33,7 @@ const fetchLottoResults = async (payload: LottoRequestPayload): Promise<LottoRes
 };
 
 /** Technically its a mutation, but given that we're using a POST request to effectively make a GET doesn't follow HTTP standards, we're going to mimic a query **/
+/** Could improve this controling what we exposing the important props e.g mutateAsync(aka fetching), loading, etc. **/
 const useLottos = (): UseMutationResult<LottoResponse, unknown, LottoRequestPayload> => {
   return useMutation({
     mutationFn: fetchLottoResults,

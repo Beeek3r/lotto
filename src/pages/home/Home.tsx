@@ -5,7 +5,7 @@ import DrawPicker from '../../components/DrawPicker';
 
 const Home = () => {
   const fetchLottoResultsRef = useRef<boolean>(false)
-  const {mutateAsync, data} = useLottos()
+  const {mutateAsync: fetch, data} = useLottos()
   const [selectedDraw, setSelectedDraw] = useState<Draw | null>(null)
 
   useEffect(() => {
@@ -13,14 +13,14 @@ const Home = () => {
 
     const fetchLottoResults = async () => {
       try {
-        await mutateAsync({
+        await fetch({
           CompanyId: 'GoldenCasket',
           MaxDrawCountPerProduct: 1,
           OptionalProductFilter: ['Powerball']
         });
 
         /** Uncomment for a larger selection of draws **/
-        // await mutateAsync({
+        // await fetch({
         //   CompanyId: 'GoldenCasket',
         //   MaxDrawCountPerProduct: 1,
         // });
@@ -32,7 +32,7 @@ const Home = () => {
     };
 
     fetchLottoResults();
-  }, [mutateAsync])
+  }, [fetch])
 
   /** Should do a better job with loading state. Probably better handle with a <Suspense/> and use the <CircularProgress /> as the fallback **/
   if (!data) {

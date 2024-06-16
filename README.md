@@ -20,13 +20,11 @@ Alternatively, you can run this via `docker-compose`
 3. Run `npm run dev`
 
 ## Live demo
-You can see a light demo here
+You can see a light demo here https://beeek3r.github.io/lotto/
 
 ## Screenshots
-<div style="display: flex; flex-direction: column; align-items: center;">
-  <img src="public/zero-state.png" alt="End State" />
-  <p>Zero State</p>
-</div>
+![End State Image](public/end-state.png)
+![End State Image](public/end-state.png)
 
 <div style="display: flex; flex-direction: column; align-items: center;">
   <img src="public/end-state.png" alt="End State" />

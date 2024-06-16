@@ -7,6 +7,5 @@ services:
     container_name: lotto-frontend
     ports:
       - '3003:3003'
-    # TODO: Check if I need to mount for hotreload
     volumes:
       - './:/root'

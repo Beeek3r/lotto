@@ -12,14 +12,16 @@ To run the application you require the following (should be fine with the LTS fo
 ## Getting started
 You can run this via your local machine
 1. Run `cp .env.example .env`
-2. Run `npm run dev`
+2. Run `npm install`
+3. Run `npm run dev`
 4. Visit http://localhost:3003/lotto/
 
 Alternatively, you can run this via `docker-compose`
 1. Run `cp .env.example .env`
 2. Run `cp docker-compose.example.yml docker-compose.yml`
-3. Run `npm run dev`
-4. Visit http://localhost:3003/lotto/
+3. Run `npm install`
+4. Run `docker compose up`
+5. Visit http://localhost:3003/lotto/
 
 ## Live demo
 You can see a live demo here https://beeek3r.github.io/lotto/

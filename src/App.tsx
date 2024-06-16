@@ -10,10 +10,10 @@ const queryClient = new QueryClient()
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-    <ThemeProvider theme={theme}>
-      {/* Route different pages here or abstract it somewhere else via some page like react-router */}
-      <HomePage />
-    </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        {/* Route different pages here or abstract it somewhere else via some page like react-router */}
+        <HomePage />
+      </ThemeProvider>
     </QueryClientProvider>
   )
 }

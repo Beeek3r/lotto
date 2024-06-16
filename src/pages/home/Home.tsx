@@ -34,7 +34,7 @@ const Home = () => {
     fetchLottoResults();
   }, [mutateAsync])
 
-  /** Should do a better job with loading state **/
+  /** Should do a better job with loading state. Probably better handle with a <Suspense/> and use the <CircularProgress /> as the fallback **/
   if (!data) {
     return  <CircularProgress />
   }

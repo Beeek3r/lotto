@@ -25,12 +25,14 @@ interface LottoResponse {
   Success: boolean
 }
 
+/** Probably better to seperate the call and hook in different files / dirs **/
 const fetchLottoResults = async (payload: LottoRequestPayload): Promise<LottoResponse> => {
   const response = await axios.post<LottoResponse>('https://data.api.thelott.com/sales/vmax/web/data/lotto/latestresults', payload);
 
   return response.data;
 };
 
+/** Technically its a mutation, but given that we're using a POST request to effectively make a GET doesn't follow HTTP standards, we're going to mimic a query **/
 const useLottos = (): UseMutationResult<LottoResponse, unknown, LottoRequestPayload> => {
   return useMutation({
     mutationFn: fetchLottoResults,

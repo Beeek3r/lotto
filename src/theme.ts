@@ -1,6 +1,11 @@
 import {createTheme} from '@mui/material/styles';
 
-/** TODO - Add spacing **/
+/** 
+ * TODO - Add spacing 
+ * 
+ * Style and theme should probably have been combined into just theme.
+ * 
+ * **/
 export const Style = {
   FontSize: {
     Small: '12px',
@@ -18,10 +23,10 @@ export const Style = {
 export const theme = createTheme({
   palette: {
     primary: {
-      main: '#800080', // your custom primary color
+      main: '#800080',
     },
     secondary: {
-      main: '#4f5f98', // your custom secondary color
+      main: '#4f5f98',
     },
   },
 });

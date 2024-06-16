@@ -34,9 +34,9 @@ const DrawNumbers = ({selectedPrimaryNumbers, totalPrimaryNumbers, selectedSecon
           </SelectedSecondaryDrawNumberCircle>
         ))}
 
-        {/* Render the remaining primary numbers yet to be selected. Highlight the first empty one.*/}
+        {/* Render the remaining primary numbers yet to be selected. Highlight the first empty one if there are multiple secondary numbers */}
         {Array.from({length: totalSecondaryNumbers - selectedSecondaryNumbers.size}).map((_, index) => (
-          <EmptySecondaryDrawNumberCircle next={index === 0} style={{marginBottom: !mdBreakpointUp ? '12px' : 'inherit'}} data-testid={`secondary-draw-number-item-empty`}>
+          <EmptySecondaryDrawNumberCircle next={index === 0 && totalSecondaryNumbers > 1} style={{marginBottom: !mdBreakpointUp ? '12px' : 'inherit'}} data-testid={`secondary-draw-number-item-empty`}>
             <Typography fontSize={Style.FontSize.Medium} fontWeight='bold'>PB</Typography>
           </EmptySecondaryDrawNumberCircle>
         ))}

@@ -1,4 +1,3 @@
-// src/queries/lotto.ts
 import { useMutation, UseMutationResult } from '@tanstack/react-query';
 import axios from 'axios';
 

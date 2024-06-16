@@ -16,8 +16,8 @@ You can run this via your local machine
 
 Alternatively, you can run this via `docker-compose`
 1. Run `cp .env.example .env`
-2Run `cp docker-compose.example.yml docker-compose.yml`
-3Run `npm run dev`
+2. Run `cp docker-compose.example.yml docker-compose.yml`
+3. Run `npm run dev`
 
 ## Live demo
 You can see a light demo here
